@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.1.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jun 24, 2022 at 05:16 PM
+- Server version: 10.4.21-MariaDB
+- PHP Version: 8.0.11
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="hotel" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="book_user">
+                CREATE TABLE `book_user` (
+                  `user_id` int(3) NOT NULL AUTO_INCREMENT,
+                  `name` text NOT NULL,
+                  `age` int(2) NOT NULL,
+                  `email` text NOT NULL,
+                  `address` text NOT NULL,
+                  `rooms` int(3) NOT NULL,
+                  `adults` int(3) NOT NULL,
+                  `children` int(3) NOT NULL,
+                  `phno` int(11) NOT NULL,
+                  PRIMARY KEY (`user_id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'hotel'
+    -->
+    <database name="hotel">
+        <!-- Table book_user -->
+        <table name="book_user">
+            <column name="user_id">1</column>
+            <column name="name">Anwesha Kar</column>
+            <column name="age">21</column>
+            <column name="email">anwesha@gmail.com</column>
+            <column name="address">Beldih Lake Flats,Jamshedpur</column>
+            <column name="rooms">2</column>
+            <column name="adults">3</column>
+            <column name="children">4</column>
+            <column name="phno">987654321</column>
+        </table>
+        <table name="book_user">
+            <column name="user_id">2</column>
+            <column name="name">Arup Kar</column>
+            <column name="age">52</column>
+            <column name="email">arup.kar@gmail.com</column>
+            <column name="address">Beldih Lake Flats,Jamshedpur</column>
+            <column name="rooms">2</column>
+            <column name="adults">4</column>
+            <column name="children">3</column>
+            <column name="phno">987654324</column>
+        </table>
+        <table name="book_user">
+            <column name="user_id">3</column>
+            <column name="name">Arup Kar</column>
+            <column name="age">52</column>
+            <column name="email">piukar@gmail.com</column>
+            <column name="address">Beldih Lake Flats,Jamshedpur</column>
+            <column name="rooms">2</column>
+            <column name="adults">4</column>
+            <column name="children">3</column>
+            <column name="phno">987654324</column>
+        </table>
+    </database>
+</pma_xml_export>
