@@ -6,7 +6,7 @@ $db_name="hotel";
 $response=array();
 $conn=mysqli_connect($hostname,$sql_username,"",$db_name);
 if(!$conn){
-$response["sucess"]=false;
+$response["success"]=false;
 $response["message"]="Connection Failed: ".mysqli_connect_error();
 echo json_encode($response);
 exit();
