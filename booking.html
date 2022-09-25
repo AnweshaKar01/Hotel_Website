@@ -13,13 +13,21 @@
         var address = document.forms["BookForm"]["address"].value;
         var email = document.forms["BookForm"]["email"].value;
         var rooms = document.forms["BookForm"]["rooms"].value;
-
+        var days = document.forms["BookForm"]["days"].value;
+        var  dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        
 
          if ( name == null || name == "" || age == null || age == "" ||address == null || address == "" ||email == null || email == "" || rooms == null || rooms == "" ) {
-            alert("First name must be filled out");
+            alert("Fill out all the details");
             return false;
         }
+
+        var ele=document.getElementsByName("check_out");
+        ele.addEventListener("change", addDays);
     }
+    function addDays()
 </script>
 
 <body>
@@ -40,9 +48,9 @@
                     <div class="card" >
                     <div class="card-body" >
                         <h1 >BOOK YOUR ROOMS</h1>
-        	<form name="BookForm" action="booking.php" onsubmit="return validateForm()" method="post">
+            <form name="BookForm" action="booking.php" onsubmit="return validateForm()" method="post">
     
-        		
+                
                             <label>Name</label><br>
                             <input type="text" name="name" class="form-control"><br>
                             <label>Age</label><br>
@@ -59,18 +67,43 @@
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
-                          </select>            
-                
-                
-                            <label>Adults</label><br>
-                            <input type="text" name="adults" class="form-control"><br>
-                            <label>Children</label><br>
-                            <input type="text" name="children" class="form-control"><br>
+                          
+                          </select> 
+                           <br>       
+                        <label>No of days</label><br>
+                        <select  name="days" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                       
+                        
+                        </select>
+                    </br>
+                            <label for="check_in">Check-in:</label><br>   
+                            <input type="date" name="check_in" min="2022-7-23" max="2023-12-31" class="form-control">  <br>    
+                            <label for="check_out">Check-out:</label><br>   
+                            <input type="date" name="check_out" class="form-control"><br>   
+                            <label>Adults:</label><br>
+                            <input type="number" name="adults" min="1" max="10" class="form-control"><br>
+                            <label>Children:</label><br>
+                            <input type="number" name="children" min="0" max="10" class="form-control"><br>
                             
                             
                             <input type="submit" value="Book Now" class="btn btn-success btn-lg btn-block">
                         </form>
                         
-        	
+            
 
         </body>
